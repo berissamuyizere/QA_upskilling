@@ -7,8 +7,8 @@ describe('registerUser', () => {
     expect(
       registerUser('Sara', 'sara@example.com', 25)
     ).toEqual({
-      name: 'John',
-      email: 'john@test.com',
+      name: 'Sara',
+      email: 'sara@example.com',
       age: 25
     });
   });
@@ -22,7 +22,7 @@ describe('registerUser', () => {
 
   test('should throw error for invalid email', () => {
     expect(() =>
-      registerUser('Sara', 'sara@example.com', 25)
+      registerUser('Sara', 'saraexample.com', 25)
     ).toThrow('Invalid email');
   });
 
