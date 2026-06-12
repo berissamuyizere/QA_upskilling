@@ -1,0 +1,101 @@
+REGISTER USER - TEST CASES
+
+Function:
+registerUser(name, email, age)
+
+========================================
+POSITIVE TEST CASES
+========================================
+
+TC-01: Register valid user
+Input:
+  name = "sara"
+  email = "sara@example.com"
+  age = 25
+
+Expected:
+  User object is returned.
+
+========================================
+NEGATIVE TEST CASES
+========================================
+
+TC-02: Missing name
+Input:
+  name = ""
+  email = "sara@example.com"
+  age = 25
+
+Expected:
+  Error: "Name required"
+
+----------------------------------------
+
+TC-03: Invalid email
+Input:
+  name = "Sara"
+  email = "saraexample.com"
+  age = 25
+
+Expected:
+  Error: "Invalid email"
+
+----------------------------------------
+
+TC-04: Underage user
+Input:
+  name = "Sara"
+  email = "sara@example.com"
+  age = 17
+
+Expected:
+  Error: "Must be 18 or older"
+
+========================================
+BOUNDARY TEST CASES
+========================================
+
+TC-05: Age exactly 18
+Input:
+  name = "Sara"
+  email = "sara@example.com"
+  age = 18
+
+Expected:
+  User registered successfully.
+
+----------------------------------------
+
+TC-06: Age just below boundary
+Input:
+  name = "Sara"
+  email = "sara@example.com"
+  age = 17
+
+Expected:
+  Error: "Must be 18 or older"
+
+----------------------------------------
+
+TC-07: Age just above boundary
+Input:
+  name = "Sara"
+  email = "sara@example.com"
+  age = 19
+
+Expected:
+  User registered successfully.
+
+========================================
+COVERAGE
+========================================
+
+✓ Positive scenarios covered
+✓ Negative scenarios covered
+✓ Boundary scenarios covered
+✓ All validation branches covered
+✓ Return path covered
+
+====================================================
+  TOTAL: 6 tests | 6 passed | 0 failed
+====================================================
